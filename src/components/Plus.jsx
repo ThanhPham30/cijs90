@@ -1,14 +1,11 @@
-import { useState } from 'react'
-
-const Plus = () => {
-    const [sumNumber, setSum] = useState(0);
+/* eslint-disable react/prop-types */
+const Plus = ({value, setValue, number}) => {
     const handleSum = () => {
-        setSum(sumNumber + 5);
+        setValue(value + number);
     }
     return (
         <>
-            <h1>{sumNumber}</h1>
-            <button onClick={handleSum}>cong 5</button>
+            <button onClick={handleSum}>Cộng với {number}</button>
         </>
     )
 }

@@ -1,16 +1,17 @@
-import { useState } from 'react'
-
-const Divide = () => {
-    const [sumNumber, setSum] = useState(100);
+/* eslint-disable react/prop-types */
+const Divide = ({ value, setValue, number }) => {
 
     const handleDivide = () => {
-        setSum(sumNumber / 5);
+        if (number === 0) {
+            alert('Số chia không hợp lệ');
+        } else {
+            setValue(value / number);
+        }
     }
 
     return (
         <>
-            <h1>{sumNumber}</h1>
-            <button onClick={handleDivide}>chia 5</button>
+            <button onClick={handleDivide}>Chia cho {number}</button>
         </>
     )
 }

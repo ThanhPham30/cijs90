@@ -1,14 +1,11 @@
-import { useState } from 'react'
-
-const Multiply = () => {
-    const [sumNumber, setSum] = useState(1);
+/* eslint-disable react/prop-types */
+const Multiply = ({value, setValue, number}) => {
     const handleMultiply = () => {
-        setSum(sumNumber * 5);
+        setValue(value * number);
     }
     return (
         <>
-            <h1>{sumNumber}</h1>
-            <button onClick={handleMultiply}>Nhan 5</button>
+            <button onClick={handleMultiply}>Nhân với {number}</button>
         </>
     )
 }

@@ -1,16 +1,12 @@
-import { useState } from 'react'
-
-const Minus = () => {
-    const [sumNumber, setSum] = useState(100);
-
+/* eslint-disable react/prop-types */
+const Minus = ({value, setValue, number}) => {
     const handleMinus = () => {
-        setSum(sumNumber - 5);
+        setValue(value - number);
     }
 
     return (
         <>
-            <h1>{sumNumber}</h1>
-            <button onClick={handleMinus}>tru 5</button>
+            <button onClick={handleMinus}>Trừ cho {number}</button>
         </>
     )
 }
